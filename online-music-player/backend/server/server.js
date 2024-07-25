@@ -2,6 +2,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth');
+const musicRoutes = require('./routes/music');
+app.use('/api/music', musicRoutes);
 
 const app = express();
 
