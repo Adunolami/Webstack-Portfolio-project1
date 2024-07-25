@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const config = require('./config/config'); // Adjust path to config
+const config = require('./config/config'); // Import configuration
 
 const app = express();
 
-// Connect to MongoDB
+// Log the MongoDB URI to check if it's loaded correctly
+console.log('MongoDB URI:', config.mongoURI);
+
 mongoose.connect(config.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -13,7 +15,7 @@ mongoose.connect(config.mongoURI, {
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Middleware
-app.use(express.json()); // For parsing application/json
+app.use(express.json());
 
 // Example route
 app.get('/', (req, res) => {
@@ -21,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // Test route to create a user
-const User = require('./models/User'); // Adjust path to User model
+const User = require('./models/User'); // Import User model
 app.post('/test', async (req, res) => {
   try {
     const user = new User({
