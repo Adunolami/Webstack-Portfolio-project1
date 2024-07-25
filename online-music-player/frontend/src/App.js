@@ -1,29 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Signup from './components/Signup';
-import Signin from './components/Signin';
-import { AuthProvider } from './context/AuthContext';
+// src/App.js
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="App">
-          <Switch>
-            <Route path="/signup" component={Signup} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/" exact>
-              <h1>Welcome to the Online Music Player</h1>
-              <p><a href="/signup">Sign Up</a> | <a href="/signin">Sign In</a></p>
-            </Route>
-          </Switch>
-        </div>
+        <NavBar />
+        <Switch>
+          <Route path="/signup" component={Signup} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/" exact>
+            <h1>Welcome to the Online Music Player</h1>
+            <p><Link to="/signup">Sign Up</Link> | <Link to="/signin">Sign In</Link></p>
+          </Route>
+        </Switch>
       </Router>
     </AuthProvider>
   );
 }
-
-export default App;
-
-
-
