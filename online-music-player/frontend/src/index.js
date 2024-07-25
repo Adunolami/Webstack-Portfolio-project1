@@ -1,12 +1,12 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './index.css'; // For global styles
+import './index.css'; // Adjust this path if your CSS file is located elsewhere
 
 ReactDOM.render(
-  <Router>
+  <React.StrictMode>
     <App />
-  </Router>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
