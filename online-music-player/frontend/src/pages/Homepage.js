@@ -1,4 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import MusicPlayer from '../components/MusicPlayer';
+import Navbar from '../components/Navbar';
+
+const HomePage = () => {
+  return (
+    <div>
+      <Navbar />
+      <h1>Home Page</h1>
+      <MusicPlayer />
+    </div>
+  );
+};
+
+export default HomePage;
+
+/*import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const HomePage = () => {
@@ -72,3 +88,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+*/
