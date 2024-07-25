@@ -1,8 +1,11 @@
 // src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
-// src/App.js
+import Signin from './components/Signin';
+import Signup from './components/Signup';
+import { AuthProvider } from './context/AuthContext';
 import './App.css';
-
 
 function App() {
   return (
@@ -21,3 +24,5 @@ function App() {
     </AuthProvider>
   );
 }
+
+export default App;
