@@ -1,4 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Login from '../components/Login';
+import Navbar from '../components/Navbar';
+
+const LoginPage = () => {
+  return (
+    <div>
+      <Navbar />
+      <Login />
+    </div>
+  );
+};
+
+export default LoginPage;
+
+
+/*import React, { useState } from 'react';
 import Login from '../components/Login';
 
 const LoginPage = () => {
@@ -11,5 +27,5 @@ const LoginPage = () => {
     </div>
   );
 };
-
+*/
 export default LoginPage;
