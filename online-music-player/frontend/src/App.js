@@ -1,19 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import HomePage from './pages/HomePage';
-import { AuthProvider } from './contexts/AuthContext';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/Homepage';  // Adjust the import if your file name is different
+import LoginPage from './pages/LoginPage'; // Adjust the import if your file name is different
+import SignupPage from './pages/SignupPage'; // Example additional page
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <Switch>
-          <Route path="/login" component={LoginPage} />
-          <Route path="/" component={HomePage} />
-        </Switch>
-      </AuthProvider>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} /> {/* Example additional route */}
+    </Routes>
   );
 }
 

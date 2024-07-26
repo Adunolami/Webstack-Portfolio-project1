@@ -1,6 +1,6 @@
 import React from 'react';
-import MusicPlayer from '../components/MusicPlayer';
-import Navbar from '../components/Navbar';
+import MusicPlayer from '../Components/MusicPlayer';
+import Navbar from '../Components/Navbar';
 
 const HomePage = () => {
   return (
