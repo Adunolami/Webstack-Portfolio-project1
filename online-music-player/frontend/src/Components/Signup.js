@@ -1,6 +1,20 @@
+// src/Components/Signup.js
 import React from 'react';
-import Signup from '../components/Signup';
-import Navbar from '../components/Navbar';
+
+const Signup = () => {
+  return (
+    <div>
+      <h2>Signup Form</h2>
+    </div>
+  );
+};
+
+export default Signup;
+
+
+/*import React from 'react';
+import Signup from '../pages/SignupPage';
+import Navbar from './Navbar';
 
 const SignupPage = () => {
   return (
@@ -11,10 +25,10 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
+export default Signup;
 
 
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
