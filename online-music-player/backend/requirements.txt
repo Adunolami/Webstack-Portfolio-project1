@@ -1,0 +1,10 @@
+wheel
+python-dotenv
+flask
+flask_cors
+pyrebase4
+bcrypt
+mutagen
+gunicorn
+pytest
+pytest-flask
